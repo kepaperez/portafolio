@@ -5,18 +5,17 @@
     font-family: 'Share Tech', sans-serif;
  
 }
-
+/*https://brittanychiang.com*/
 section{
-    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     background-color: #1B1B1B;
-    scroll-snap-align: start;
-    margin-right: 20vw;
-    margin-left: 20vw;
- 
+   scroll-snap-align:start;
 }
+
 section h1{
     color: white;
 }
@@ -25,24 +24,31 @@ section h1{
     overflow-y: scroll;
     height: 100vh;
     background-color: #1B1B1B;
-
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    height:30vh;
+    font-size: 20px;
+}
+.contenidoSection{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   
 }
 
-.one{
-   display: flex;
-   justify-content: space-between;
-}
 
-.three{
-    
-}
-.titulo{
+/*Section one*/
+
+.tituloNombre{
     color: white;
     font-size: 5rem;
     font-weight: bold;
     padding: 0.2rem 0rem 0.2rem 0rem;
-    margin: 0;
+    margin: 0px 0px 15px 4px;
 }
 .textSobreMi{
     display: flex;
@@ -51,14 +57,18 @@ section h1{
 }
 
 .textSobreMi p{
-    width: 63vh;
+    width: 40rem;
+    font-size: 20px;
    
 }
 .textSobreMi p {
     color: rgb(216, 216, 216);
+    margin: 0px 0px 30px 4px;
 }
 .holasoy{
+    font-size: 16px;
     color: #039BE5;
+    margin: 0px 0px 30px 4px;
 }
 button{
     width: 10rem;
@@ -90,37 +100,123 @@ button:hover{
     transition: 2000ms ;
 }
 .imagePerfil img:hover{
- 
     width: 400px;
 }
+
+/*LOGO*/
+svg {
+    width: 4rem;
+    width: 4rem;  
+}
+.s0 { fill: #039BE5 } 
+.s1 { fill: #015d9228;stroke: #039BE5;stroke-width: 60 }
+.s1:hover { fill: #039ae544;stroke: #039BE5;stroke-width: 60 }
+
 /*navbar*/
-ul {
-    font-size:medium;
-    margin-right: 20vw;
-    margin-left: 20vw;
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0;
+nav{
+    background-color:transparent;
+    position: fixed;
+    width: 100%;
 }
-li {
-    float: left;
-}
-li a {
-    margin: 1rem 1rem 1rem 0rem;
+nav li{
+    list-style: none;
+    background: linear-gradient(to bottom right, #039BE5, #015C92);
+    padding: 15px;
     border-radius: 25px;
-    display: block;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    padding: 1rem 1rem 1rem 1rem ;
+    min-width: 120px;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;   
 }
-li a:hover {
-    background-color: rgb(255, 255, 255);
-    color:black;
+nav li:hover{
+    background: #039BE5;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.nav-branding{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+.bar{
+   display: block;
+   width: 25px;
+   height: 3px;
+   margin: 5px auto;
+   -webkit-transition:all 0.3s ease-in-out ; 
+   transition:all 0.3s ease-in-out ;
+   background-color: white;
+}
+@media (max-width: 900px){
+    nav li{
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #1B1B1B;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+}
+
+
+
+/*------------Section 1-------------------*/
+@media only screen and (max-width: 1200px) {
+    .textSobreMi{
+        width: 100vh;
+        justify-content: center;
+    }
+    div.textSobreMi   {order: 5;}
+    .textSobreMi p{
+        width: 100%;
+    }
+    div.imagePerfil  {order: 2;}
+    .imagePerfil{margin: 10rem;}
 }
