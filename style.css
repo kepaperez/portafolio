@@ -2,9 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Share Tech', sans-serif;
- 
+    font-family: 'Poppins';
+
+    --color1: #131414;
+    --color2: #039BE5;
+    --color3: #015C92;
+    --color4: #ececec;
 }
+
+
 /*https://brittanychiang.com*/
 section{
     display: flex;
@@ -12,18 +18,18 @@ section{
     height: 100vh;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    background-color: #1B1B1B;
+    background-color: var(--color1);
    scroll-snap-align:start;
 }
 
 section h1{
-    color: white;
+    color: var(--color4);
 }
 .mainContainer{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
-    background-color: #1B1B1B;
+    background-color: var(--color1);
 }
 .titulo{
     display: flex;
@@ -44,47 +50,46 @@ section h1{
 /*Section one*/
 
 .tituloNombre{
-    color: white;
-    font-size: 5rem;
+    color: var(--color4);;
+    font-size: 4rem;
     font-weight: bold;
     padding: 0.2rem 0rem 0.2rem 0rem;
     margin: 0px 0px 15px 4px;
 }
 .textSobreMi{
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
+
 }
 
 .textSobreMi p{
     width: 40rem;
-    font-size: 20px;
+    font-size: 1rem;
    
 }
 .textSobreMi p {
-    color: rgb(216, 216, 216);
+    color: var(--color4);;
     margin: 0px 0px 30px 4px;
 }
 .holasoy{
     font-size: 16px;
-    color: #039BE5;
+    color: var(--color2);
     margin: 0px 0px 30px 4px;
 }
-button{
-    width: 10rem;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    border: none;
+.button{
     border-radius: 25px;
-    margin-top:1rem ;
-    padding: 1rem;
-    background: linear-gradient(to bottom right, #039BE5, #015C92);
+    padding: .75em 1.5em;;
+    cursor: pointer;
+    text-decoration: none;
+    color:  var(--color4);
+    background: linear-gradient(to bottom right, var(--color2),var(--color3));
+    border: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s ease-in-out 0s;
 }
-button:hover{
-    box-shadow: 2px 3px 4px #015C92;
-    background: linear-gradient(to bottom right, #039BE5, #039BE5);
+.button:hover{ 
+    --color4Hover:rgb(148, 148, 148);
+    transform: scale(1.10);
 }
 .imagePerfil{
     display: flex;
@@ -100,7 +105,7 @@ button:hover{
     transition: 2000ms ;
 }
 .imagePerfil img:hover{
-    width: 400px;
+    transform: scale(1.10);
 }
 
 /*LOGO*/
@@ -120,20 +125,17 @@ nav{
 }
 nav li{
     list-style: none;
-    background: linear-gradient(to bottom right, #039BE5, #015C92);
-    padding: 15px;
-    border-radius: 25px;
-    min-width: 120px;
-    max-width: 150px;
     display: flex;
     justify-content: center;   
 }
-nav li:hover{
-    background: #039BE5;
+nav a:hover{
+    color: var(--color4);
+    transform: scale(1.15);
 }
 .navbar a{
-    color: white;
+    color: #039BE5;
     text-decoration: none;
+    transition: .25s ease,text-shadow .3s ease
 }
 .navbar{
     min-height: 70px;
@@ -191,10 +193,11 @@ nav li:hover{
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #1B1B1B;
+        background-color: var(--color1);
         width: 100%;
         text-align: center;
         transition: 0.3s;
+    
     }
     .nav-item{
         margin: 16px 0;
