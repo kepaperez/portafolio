@@ -46,7 +46,9 @@ section h1{
   
 }
 
-
+.textSobreMi{
+    padding: 1rem;
+}
 /*Section one*/
 
 .tituloNombre{
@@ -55,9 +57,6 @@ section h1{
     font-weight: bold;
     padding: 0.2rem 0rem 0.2rem 0rem;
     margin: 0px 0px 15px 4px;
-}
-.textSobreMi{
-
 }
 
 .textSobreMi p{
@@ -95,11 +94,11 @@ section h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vh;
-    
 }
 .imagePerfil img{
-    width: 300px;
+    
+    width: 70%;
+    max-width: 400px;
     border-radius: 50%;
     box-shadow: 30px 15px 50px #015C92 , -24px -15px 50px #039BE5, -10px -29px 50px #0277BD;
     transition: 2000ms ;
@@ -107,7 +106,32 @@ section h1{
 .imagePerfil img:hover{
     transform: scale(1.10);
 }
-
+.containerHabilidades{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.containerHabilidades .hSection{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+figure{
+    text-align: center;
+ 
+}
+figure img{
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--color1);
+    padding: 1rem;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px 1px #4c4e4ed3 inset
+}
+figure figcaption{
+    color: var(--color4);
+}
 /*LOGO*/
 svg {
     width: 4rem;
@@ -138,6 +162,7 @@ nav a:hover{
     transition: .25s ease,text-shadow .3s ease
 }
 .navbar{
+    z-index: 1000;
     min-height: 70px;
     display: flex;
     justify-content: space-between;
@@ -197,7 +222,6 @@ nav a:hover{
         width: 100%;
         text-align: center;
         transition: 0.3s;
-    
     }
     .nav-item{
         margin: 16px 0;
@@ -205,7 +229,24 @@ nav a:hover{
     .nav-menu.active{
         left: 0;
     }
+    .imagePerfil img{
+        box-shadow: 5px 12px 10px #0277BD , -5px -12px 10px #0277BD;
+    }
+    .tituloNombre{
+        font-size: 3rem;
+    }
+    section{
+       scroll-snap-align:0;
+    }
+    
+    section h1{
+        color: var(--color4);
+    }
+    .mainContainer{
+        scroll-snap-type: none;
+        overflow-y: none;
 
+    }
 }
 
 
@@ -220,6 +261,13 @@ nav a:hover{
     .textSobreMi p{
         width: 100%;
     }
-    div.imagePerfil  {order: 2;}
-    .imagePerfil{margin: 10rem;}
+    div.imagePerfil  {
+        order: 2;
+        margin:5rem 0;
+    }
+    .navbar{
+    padding: 0 25px;
+    height: 100px;
+    background-color: #131414;
+    }
 }
