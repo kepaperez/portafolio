@@ -11,3 +11,19 @@ document.querySelector(".nav-link").forEach(n => n.addEventListener("click",() =
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
+
+
+function copyToClipBoard() {
+
+    var content = "kepaperez2001@gmail.com";
+    
+    navigator.clipboard.writeText(content)
+    .then(() => {
+        console.log('Correo copìado en el portapapeles');
+    })
+    .catch(err => {
+        console.error('Error in copying text: ', err);
+    });
+
+    alert("Copied!");
+}

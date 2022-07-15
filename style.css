@@ -4,7 +4,8 @@
     box-sizing: border-box;
     font-family: 'Poppins';
 
-    --color1: #131414;
+    --color1: #121212 ;
+    --color1v2: #1b1b1b ;
     --color2: #039BE5;
     --color3: #015C92;
     --color4: #ececec;
@@ -55,7 +56,7 @@ section h1{
 }
 
 .textSobreMi{
-    padding: 1rem;
+    padding: 2rem;
 }
 /*Section one*/
 
@@ -93,6 +94,7 @@ section h1{
     display: inline-block;
     cursor: pointer;
     transition: .2s ease-in-out 0s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .button:hover{ 
     --color4Hover:rgb(148, 148, 148);
@@ -155,17 +157,16 @@ section h1{
 figure{
     text-align: center;
     margin: 1rem ;
-}
-figure img:hover{
-    background-color: rgba(255, 255, 255, 0.144);
+    
 }
 figure img{
     width: 5.9rem;
     height: 5.9rem;
-    background-color: var(--color1);
+    background-color: var(--color1v2);
     padding: 1.2rem;
     border-radius: 25px;
-    box-shadow: 1px 1px 1px 1px #4c4e4ed3 inset
+   
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 figure figcaption{
     color: var(--color4);
@@ -207,13 +208,15 @@ figure figcaption{
 }
 
 .proyecto{
+
     margin: 2rem;
     padding: 1.5rem;
-    width: 30rem;
+    width: 27rem;
     border-style: solid;
     border-width: 2px;
     border-radius: 25px;
     border-color: var(--color2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 .proyectButtons{
     margin-top: 1.5rem;
@@ -237,6 +240,18 @@ figure figcaption{
 .proyectoLink:hover{
     transform: scale(1.1);
     box-shadow: 1px 1px 1px 1px var(--color2) 
+}
+
+.containerContacto{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 30%;
+    text-align: center;
+
+}
+.containerContacto figure img:hover{
+    background-color: var(--color1)
 }
 /*LOGO*/
 svg {
@@ -356,6 +371,9 @@ nav a:hover{
         overflow-y: none;
 
     }
+    .containerHabilidades .hSection{
+        width: 90%;
+    }
 }
 
 
@@ -372,7 +390,7 @@ nav a:hover{
     }
     div.imagePerfil  {
         order: 2;
-        margin:5rem 0;
+        margin:6rem 0;
     }
     .navbar{
     padding: 0 25px;
