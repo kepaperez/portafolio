@@ -25,5 +25,5 @@ function copyToClipBoard() {
         console.error('Error in copying text: ', err);
     });
 
-    alert("Copied!");
+    alert("Correo copìado en el portapapeles!");
 }
