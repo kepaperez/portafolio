@@ -1,7 +1,7 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" fill="#039BE5">
 	<title>New Project</title>
 	<style>
-		.s0 { fill: #000000 } 
+		.s0 { fill: #039BE5 } 
 	</style>
 	<path id="K" class="s0" aria-label="K"  d="m590.4 795l-109.2-199.8-18 33v166.8h-145.8v-510.6h145.8v171.6l115.2-171.6h176.4l-173.4 219 180 291.6z"/>
 </svg>
