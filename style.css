@@ -9,6 +9,7 @@
     --color2: #039BE5;
     --color3: #015C92;
     --color4: #ececec;
+    --color5: #b4b4b4;
 }
 a{
     text-decoration:none;
@@ -63,11 +64,11 @@ section h1{
 /*Section one*/
 
 .tituloNombre{
-    color: var(--color4);;
-    font-size: 4rem;
-    font-weight: bold;
+    color: var(--color4);
+    font-size: 80px;
+    font-weight: 600;
     padding: 0.2rem 0rem 0.2rem 0rem;
-    margin: 0px 0px 15px 4px;
+    /*margin: 0px 0px 15px 4px;*/
 }
 
 .textSobreMi p{
@@ -76,8 +77,11 @@ section h1{
    
 }
 .textSobreMi p {
-    color: var(--color4);;
+    color: var(--color5);
     margin: 0px 0px 30px 4px;
+}
+.textSobreMi p a {
+    color: var(--color2);
 }
 .holasoy{
     font-size: 16px;
@@ -86,7 +90,7 @@ section h1{
 }
 .button{
     border-radius: 25px;
-    padding: .75em 1.5em;;
+    padding: .80em 1.6em;;
     text-decoration: none;
     color:  var(--color4);
     background: linear-gradient(to bottom right, var(--color2),var(--color3));
@@ -96,6 +100,7 @@ section h1{
     cursor: pointer;
     transition: .2s ease-in-out 0s;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
 }
 .button:hover{ 
     --color4Hover:rgb(148, 148, 148);
@@ -108,7 +113,7 @@ section h1{
 }
 .imagePerfil img{
     width: 70%;
-    max-width: 400px;
+    max-width: 500px;
     border-radius: 50%;
     box-shadow: 30px 15px 50px #015C92 , -24px -15px 50px #039BE5, -10px -29px 50px #0277BD;
     transition: 2000ms ;
@@ -388,6 +393,9 @@ nav a:hover{
         justify-content: center;
     }
     div.textSobreMi   {order: 5;}
+    .textSobreMi {
+        width: 80%;
+    }
     .textSobreMi p{
         width: 100%;
     }
